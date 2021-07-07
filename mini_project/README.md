@@ -56,6 +56,49 @@ Keep it in mind that NYY does not have any limits on subcontracting out, backlog
 
 (i=1, 2, 3, 4, 5, 6; Sep=1, Oct=2, Nov=3, Dec=4, Jan=5, Feb=6) <br>
 
+### Objective function
+![objective_function](https://latex.codecogs.com/svg.image?Z\&space;=\&space;40\sum_{i=1}^{6}{demand}_i-(300\sum_{i=1}^{6}H_i&plus;500\sum_{i=1}^{6}F_i&plus;26\sum_{i=1}^{6}x_i&plus;34\sum_{i=1}^{6}y_i&plus;30\sum_{i=1}^{6}{Sub}_i&plus;2\sum_{i=1}^{6}{Inv}_i&plus;5\sum_{i=1}^{6}{Back}_i))
 
+### Constraint
+![cst1](https://latex.codecogs.com/svg.image?&space;{Inv}_1=&space;x_1&plus;y_1&plus;{Sub}_1&plus;{Back}_1-1600&plus;1000) <br>
+![cst2](https://latex.codecogs.com/svg.image?{Inv}_2=&space;x_2&plus;y_2&plus;{Sub}_2&plus;{Back}_2-3000&plus;{Inv}_1-{Back}_1) <br>
+![cst3](https://latex.codecogs.com/svg.image?{Inv}_3=&space;x_3&plus;y_3&plus;{Sub}_3&plus;{Back}_3-3200&plus;{Inv}_2-{Back}_2) <br>
+![cst4](https://latex.codecogs.com/svg.image?{Inv}_4=&space;x_4&plus;y_4&plus;{Sub}_4&plus;{Back}_4-3800&plus;{Inv}_3-{Back}_3) <br>
+![cst5](https://latex.codecogs.com/svg.image?{Inv}_5=&space;x_5&plus;y_5&plus;{Sub}_5&plus;{Back}_5-2200&plus;{Inv}_4-{Back}_4) <br>
+![cst6](https://latex.codecogs.com/svg.image?{Inv}_6=&space;x_6&plus;y_6&plus;{Sub}_6&plus;{Back}_6-2200&plus;{Inv}_5-{Back}_5) <br>
+![cst7](https://latex.codecogs.com/svg.image?{Back}_6=0) <br>
+![cst8](https://latex.codecogs.com/svg.image?{Inv}_6=500) <br>
+![cst9](https://latex.codecogs.com/svg.image?{Work}_1-H_1&plus;F_1=80) <br>
+![cst10](https://latex.codecogs.com/svg.image?{Work}_2-H_2&plus;F_2-{Work}_1=0) <br>
+![cst11](https://latex.codecogs.com/svg.image?{Work}_3-H_3&plus;F_3-{Work}_2=0) <br>
+![cst12](https://latex.codecogs.com/svg.image?{Work}_4-H_4&plus;F_4-{Work}_3=0) <br>
+![cst13](https://latex.codecogs.com/svg.image?{Work}_5-H_5&plus;F_5-{Work}_4=0) <br>
+![cst14](https://latex.codecogs.com/svg.image?{Work}_6-H_6&plus;F_6-{Work}_5=0) <br>
+![cst15](https://latex.codecogs.com/svg.image?x_i-40{Work}_i=0\&space;\&space;;\&space;i=\&space;1,\&space;2,\&space;3,\&space;4,\&space;5,\&space;6) <br>
+![cst16](https://latex.codecogs.com/svg.image?y_i-2.5{Work}_i\le0\&space;;\&space;i\&space;=\&space;1,\&space;2,\&space;3,\&space;4,\&space;5,\&space;6) <br>
 
+![cst17](https://latex.codecogs.com/svg.image?x_i,\&space;{\&space;y}_i,\&space;{\&space;H}_i,\&space;{\&space;F}_i,\&space;{\&space;Sub}_i,\&space;{\&space;Back}_i,{\&space;Inv}_i,{\&space;Work}_i\geq0) <br>
 
+### Answer
+
+```julia
+Objective value: 217340.0
+x = [2600.0, 2600.0, 2600.0, 2560.0, 2560.0, 2560.0]
+y = [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0]
+H = [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0]
+F = [15.0, -0.0, -0.0, 1.0, 0.0, -0.0]
+Sub = [-0.0, -0.0, -0.0, 20.0, -0.0, -0.0]
+Back = [-0.0, -0.0, -0.0, 220.0, -0.0, 0.0]
+Inv = [2000.0, 1600.0, 1000.0, -0.0, 140.0, 500.0]
+Work = [65.0, 65.0, 65.0, 64.0, 64.0, 64.0]
+```
+|variable/month|September|October|November|December|January|February|
+|--------------|---------|-------|--------|--------|-------|--------|
+|x|2600 | 2600 | 2600 | 2560 |2560| 2560|
+|y|0 | 0 | 0 | 0 | 0 | 0 |
+|H|0 | 0 | 0 | 0 | 0 | 0 |
+|F|15 | 0 | 0 | 1 | 0 | 0 |
+|Sub | 0.0 | 0 | 0 | 20 | 0 | 0 |
+|Back | 0 | 0 | 0 | 220 | 0 | 0 |
+|Inv | 2000 | 1600 | 1000 | 0 | 140 | 500 |
+|Work |65 | 65 | 65 | 64 | 64 | 64 |
