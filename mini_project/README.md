@@ -41,3 +41,21 @@ Each winter jacket is sold for $40 through retailers and also NYY has 1,000 jack
 
 Keep it in mind that NYY does not have any limits on subcontracting out, backlogging, and inventories. Cost of inventory is paid at the end of inventory in the month. All stockouts are supplied from the following month’s production or previous month’s inventory. President of NYY wants to find the optimal plan that will let them stock 500 jackets in inventory and have no stockouts waiting at the end of March.
 
+
+## Solution
+
+### Decision variable
+![x_1](https://latex.codecogs.com/svg.image?x_i)        = number of products manufacturing in regular time in month i. <br>
+![y_i](https://latex.codecogs.com/svg.image?y_i)        = number of products manufacturing in overtime in month i. <br>
+![H_i](https://latex.codecogs.com/svg.image?H_i)        = number of new workers hired in month i. <br>
+![F_i](https://latex.codecogs.com/svg.image?F_i)        = number of workers fired in month i. <br>
+![Sub_i](https://latex.codecogs.com/svg.image?Sub_i)    = number of unit subcontract in month i. <br>
+![Work_i](https://latex.codecogs.com/svg.image?Work_i)  = number of workers in month i. <br>
+![Back_i](https://latex.codecogs.com/svg.image?Back_i)  = number of unit backlog in month i. <br>
+![Inv_i](https://latex.codecogs.com/svg.image?Inv_i)    = number of inventory at the end of month i. <br>
+
+(i=1, 2, 3, 4, 5, 6; Sep=1, Oct=2, Nov=3, Dec=4, Jan=5, Feb=6) <br>
+
+
+
+
