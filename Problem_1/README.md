@@ -32,3 +32,22 @@ Figure shows the fictitious map we will assume for our numerical ver- sion. Our 
         alt="st2 pic">
 </figure>
 
+
+### Output
+```
+Objective value: 6.0
+x = [0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0]
+```
+|variables|value|
+|---|---|
+|Obj.| 6|
+|x1|0|
+|x2|1|
+|x3|1|
+|x4|1|
+|x5|0|
+|x6|1|
+|x7|0|
+|x8|1|
+|x9|0|
+|x10|1|
