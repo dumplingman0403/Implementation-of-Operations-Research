@@ -1,8 +1,8 @@
 
 
-# Minimum Cover EMS Model
 
-## Problem description
+## Problem 1
+### **Problem description - Minimum Cover EMS Model**
 
 <figure align="center">
     <img src="images/district.png"
@@ -20,7 +20,7 @@ Figure shows the fictitious map we will assume for our numerical ver- sion. Our 
         alt="equation pic">
 </figure>
 
-## Minimum Cover EMS Model
+### **Minimum Cover EMS Model**
 
 <figure align="center">
     <img src="images/st1.png"
@@ -33,7 +33,7 @@ Figure shows the fictitious map we will assume for our numerical ver- sion. Our 
 </figure>
 
 
-### Output
+### **Output**
 ```
 Objective value: 6.0
 x = [0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0]
@@ -51,3 +51,29 @@ x = [0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0]
 |x8|1|
 |x9|0|
 |x10|1|
+
+
+
+## Problem 2
+
+### **problem description**
+ The sister communities program pairs cities in Russia with cities in the United States that have a similar size and economic base. Visits are then exchanged between the sister com- munities to improve international understanding. The following table shows the program’s compatibility scores (0 to 100) for the 4 U.S. and 4 Russian cities about to join the program.<br>
+
+ ![p2_pic](images/p2_pic.png)
+
+ Sister communities seeks a maximum total compatibility pairing. <br>
+
+### **Formulate Problem**
+
+xij = 1 if U.S. city i is assigned to Russian city j <br>
+xij = 0 otherwise
+
+![p2_formu_pic](images/p2_func_pic.png)
+### **Output**
+
+```
+Objective value: 338.0
+x = [-0.0 -0.0 1.0 -0.0; -0.0 1.0 -0.0 -0.0; 1.0 -0.0 -0.0 -0.0; -0.0 -0.0 0.0 1.0]
+```
+maximum compatibility = 338 <br>
+X_13 = X_21 = X_31 = X_44 = 1, others = 0

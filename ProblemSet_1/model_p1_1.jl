@@ -1,6 +1,6 @@
 using JuMP, CPLEX
 
-m = Model(with_optimizer(Gurobi.CPLEX))
+m = Model(CPLEX.Optimizer)
 
 
 @variable(m, x[1:10], Bin)
