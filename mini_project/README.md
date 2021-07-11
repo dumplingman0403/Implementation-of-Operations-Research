@@ -105,4 +105,4 @@ Work = [65.0, 65.0, 65.0, 64.0, 64.0, 64.0]
 
 ### Code
 - [Julia](model_miniprj.jl)
-- [AMPL](mini_project/miniprj.mod)
+- [AMPL](miniprj.mod)
