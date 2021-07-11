@@ -102,3 +102,7 @@ Work = [65.0, 65.0, 65.0, 64.0, 64.0, 64.0]
 |Back | 0 | 0 | 0 | 220 | 0 | 0 |
 |Inv | 2000 | 1600 | 1000 | 0 | 140 | 500 |
 |Work |65 | 65 | 65 | 64 | 64 | 64 |
+
+### Code
+- [Julia](model_miniprj.jl)
+- [AMPL](mini_project/miniprj.mod)
