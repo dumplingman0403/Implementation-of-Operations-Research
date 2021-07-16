@@ -1,0 +1,29 @@
+data;
+
+#number of demand in month i
+param demand:=
+	1 1600 #Sep
+	2 3000 #Oct
+	3 3200 #Nov
+	4 3800 #Dec
+	5 2200 #Jan
+	6 2200; #Feb
+
+	
+#cost catalog
+param:      cst:=
+	1	10   #material cost
+	2	300  #hire cost
+ 	3	5    #backlog cost
+ 	4	30	#subcontract cost
+ 	5	2	#inventory cost	
+ 	6	4	#regular time cost
+ 	7	6	#overtime cost
+ 	8	500	#layoff cost
+ 	9	4	#labor hour required per units
+ 	10  40;	#sell price
+
+param orginv:=1000; #initial inventory
+param orgwrkr:=80; #intial workers
+param maxovt:=10; #overtime limit
+
